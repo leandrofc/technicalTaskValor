@@ -3,13 +3,20 @@
 import type { Config } from "tailwindcss";
 import sharedConfig from "@repo/tailwind-config";
 
-const config: Pick<Config, "content" | "presets"> = {
+const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "../home/src/**/*.{js,ts,jsx,tsx}",
     "../host/src/**/*.{js,ts,jsx,tsx}"
   ],
-  presets: [sharedConfig]
+  presets: [sharedConfig],
+  theme: {
+    extend: {
+      fontFamily: {
+        outfit: ['Outfit', 'sans-serif'],
+      }
+    }
+  }
 };
 
 export default config;
