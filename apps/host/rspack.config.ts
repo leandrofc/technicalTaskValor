@@ -2,6 +2,7 @@ import { rspack } from "@rspack/core";
 import * as RefreshPlugin from "@rspack/plugin-react-refresh";
 import { withZephyr } from "zephyr-rspack-plugin";
 import { mfConfig } from "./module-federation.config";
+import * as path from 'path';
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -13,6 +14,10 @@ export default withZephyr()({
   devServer: {
     port: 3000,
     historyApiFallback: true,
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+      watch: true,
+    },
   },
   entry: {
     main: "./src/main.tsx"
