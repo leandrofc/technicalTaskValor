@@ -1,90 +1,72 @@
-# Zephyr Cloud Starter
+# Technical Task
 
-This is an official starter for Zephyr Cloud.
+This App is a counter that was created during a Technical task.
 
-## Using this example
+<p align="left">
+  <img widht="1008" src="./counterLayout.png">
+</p>
 
-Run the following command:
+
+## Layout
+
+I developed the application's Layout in Figma. And then I used the Layout as a reference to create the code.
+
+<a href="https://www.figma.com/design/ffcS9ZL5vOtn8o3vxCDTbZ/Untitled?node-id=905-2&t=5GrSG6CFvw9hDbQG-1" target="_blank">Click here to see the Layout in Figma</a>
+
+
+
+## Deploy
+
+I deployed the application using Zephyr cloud.
+
+<a href="https://leandro-fonseca-1307-host-technicaltaskvalor-lean-12b2a67b6-ze.zephyrcloud.app/" target="_blank">Click here to see the deployed result.</a>
+
+
+## Project base
+
+To create this project I used the example available in the zephyr-examples repository as a base.
+
+<a href="https://github.com/ZephyrCloudIO/zephyr-examples/tree/main/examples/turbo-rspack-mf" target="_blank">Click here to see the repository used as a base</a>
+
+
+
+## Installation:
+
+To run the project locally, follow the steps below:
+
+### 1. Prerequisites:
+
+Before you begin, make sure you have installed:
+
+- <a href="https://nodejs.org/en" target="_blank">Node.js</a>
+
+- <a href="https://pnpm.io/" target="_blank">pnpm</a>
+
+### 2. Clone the repository:
 
 ```sh
-npx create-turbo@latest --example https://github.com/swalker326/ze-starter-turbo
-```
-## Running this example
-For zephyr, a couple things have to happen, 
-- Publish the project to github (or any other git provider)
-  - Public or private, we just care about the git history
-- The remote applications need to be built first, which is handled by turbo so all you have to do is:
-``` bash
-turbo run build
+git clone https://github.com/leandrofc/technicalTaskValor.git
 ```
 
+### 3. Access the project directory:
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-Rspack Applications
-- `host`: An rspack application and also the host app
-- `home`: Another rspack application with module federation setup being consumed by the host
-- `settings`: A final rspack application used to highlight the routing (react router)
-- `@repo/tailwind-config`: global `tailwind` configurations 
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [Biomejs](https://biomejs.dev/guides/getting-started/) for formatting and linting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```sh
+cd technicalTaskValor
 ```
 
-### Develop
+### 4. Install the dependencies::
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+```sh
+pnpm install
 ```
 
-### Remote Caching
+### 5. Running the project:
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```sh
+pnpm run dev
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### 5. The project will be running at:
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+http://localhost:3001/
 
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
